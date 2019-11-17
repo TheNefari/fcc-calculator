@@ -30,20 +30,25 @@ class CALCULATOR extends React.Component {
       } else {
         this.refresh(displayString + key, input + key);
       }
-    } else if (this.state.lastkey == "=" && isNaN(key) && key != "=") {
-      this.refresh(this.state.answer + key, key);
+    } else if (this.state.lastkey == "=") {
+      if (isNaN(key) && key != "=") {
+        this.refresh(this.state.answer + key, key);
+      } else if (!isNaN(key)) {
+        this.refresh(key, key);
+      }
     } else if (isNaN(key)) {
       if (!isNaN(displayString[lastNumber])) {
         this.refresh(displayString + key, key);
       } else if (key == "-" && displayString[lastNumber] != "-") {
         this.refresh(displayString + key, key);
-      } else if (isNaN(displayString[lastNumber]) && isNaN(displayString[lastNumber - 1])) {
+      } else if (
+      isNaN(displayString[lastNumber]) &&
+      isNaN(displayString[lastNumber - 1]))
+      {
         this.refresh(displayString.slice(0, lastNumber - 1) + key, key);
       } else if (isNaN(displayString[lastNumber])) {
         this.refresh(displayString.slice(0, lastNumber) + key, key);
       }
-    } else if (key == "+" || key == "*" || key == "/" || key == "-") {
-      this.refresh(displayString + key, key);
     } else if (input == "0" && input[0] == "0") {
       if (!input.includes(".")) {
         this.refresh(key, key);
