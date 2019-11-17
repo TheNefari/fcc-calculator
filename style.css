@@ -1,0 +1,148 @@
+#wrapper {
+  background-color: #aba3c2;
+  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#calculator {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+#show {
+  background-color: black;
+  width: 20em;
+  height: 3em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#alldisplay {
+  height: 50%;
+  text-align: right;
+  color: orange;
+}
+
+#display {
+  height: 50%;
+  text-align: right;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+#buttons {
+  display: grid;
+  grid-template: "ac ac divide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals";
+  grid-gap: 1px;
+  border: 2px solid black;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1.2em 1em;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+button:hover {
+  outline: 1px solid white;
+}
+
+#one {
+  grid-area: one;
+  background-color: #666666;
+}
+
+#two {
+  grid-area: two;
+  background-color: #666666;
+}
+
+#three {
+  grid-area: three;
+  background-color: #666666;
+}
+
+#four {
+  grid-area: four;
+  background-color: #666666;
+}
+
+#five {
+  grid-area: five;
+  background-color: #666666;
+}
+
+#six {
+  grid-area: six;
+  background-color: #666666;
+}
+
+#seven {
+  grid-area: seven;
+  background-color: #666666;
+}
+
+#eight {
+  grid-area: eight;
+  background-color: #666666;
+}
+
+#nine {
+  grid-area: nine;
+  background-color: #666666;
+}
+
+#zero {
+  grid-area: zero;
+  background-color: #666666;
+}
+
+#add {
+  grid-area: add;
+  background-color: #999999;
+}
+
+#subtract {
+  grid-area: subtract;
+  background-color: #999999;
+}
+
+#multiply {
+  grid-area: multiply;
+  background-color: #999999;
+}
+
+#divide {
+  grid-area: divide;
+  background-color: #999999;
+}
+
+#decimal {
+  grid-area: decimal;
+  background-color: #666666;
+}
+
+#clear {
+  grid-area: ac;
+  background-color: #bf4040;
+}
+
+#equals {
+  grid-area: equals;
+  background-color: #4095bf;
+}
+
+#creator {
+  margin-top: 1em;
+}
